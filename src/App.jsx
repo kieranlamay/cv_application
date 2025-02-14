@@ -11,19 +11,47 @@ function App() {
     name: "",
     email: "",
     phone: "",
+    degree: "",
+    school: "",
+    educstartdate: "",
+    educenddate: "",
+    job: "",
+    company: "",
+    profstartdate: "",
+    profenddate: "",
+    description: "",
   });
+
+  const [tempData, setTempData] = useState(formData);
+  const handleSubmit = (e) => {
+    setTempData(formData);
+    e.preventDefault();
+    console.log("submit ran");
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log("ran");
+    // console.log("ran");
   };
 
   return (
     <div className="app-container">
-      <GeneralInfo formData={formData} handleChange={handleChange} />
-      <CV formData={formData} />
-      <Education />
-      <Professional />
+      <GeneralInfo
+        handleSubmit={handleSubmit}
+        formData={formData}
+        handleChange={handleChange}
+      />
+      <CV tempData={tempData} />
+      <Education
+        formData={formData}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+      />
+      <Professional
+        formData={formData}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+      />
     </div>
   );
 }

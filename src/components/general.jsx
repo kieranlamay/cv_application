@@ -1,16 +1,17 @@
-export function GeneralInfo({ formData, handleChange }) {
+export function GeneralInfo({ formData, handleChange, handleSubmit }) {
   return (
     <div className="general-info">
       <div className="title">General Information</div>
-      <form action="">
+      <form onSubmit={handleSubmit} action="">
         <label htmlFor="name">Full Name</label>
         <input
           type="text"
           name="name"
           id="name"
           placeholder="Enter your full name"
-          value={formData.fullname}
+          value={formData.name} // what??? should be name
           onChange={handleChange}
+          required
         />
 
         <label htmlFor="email">Email</label>
@@ -21,6 +22,7 @@ export function GeneralInfo({ formData, handleChange }) {
           placeholder="Email"
           value={formData.email}
           onChange={handleChange}
+          required
         />
 
         <label htmlFor="phone">Phone Number</label>
@@ -31,7 +33,9 @@ export function GeneralInfo({ formData, handleChange }) {
           placeholder="Phone"
           value={formData.phone}
           onChange={handleChange}
+          required
         />
+        <button type="submit">Save</button>
       </form>
     </div>
   );
