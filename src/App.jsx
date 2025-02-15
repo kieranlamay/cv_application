@@ -36,22 +36,24 @@ function App() {
 
   return (
     <div className="app-container">
-      <GeneralInfo
-        handleSubmit={handleSubmit}
-        formData={formData}
-        handleChange={handleChange}
-      />
       <CV tempData={tempData} />
-      <Education
-        formData={formData}
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
-      />
-      <Professional
-        formData={formData}
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
-      />
+      <div className="section-container">
+        <GeneralInfo
+          handleSubmit={handleSubmit}
+          formData={formData}
+          handleChange={handleChange}
+        />
+        <Education
+          formData={formData}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+        />
+        <Professional
+          formData={formData}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+        />
+      </div>
     </div>
   );
 }

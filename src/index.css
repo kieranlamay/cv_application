@@ -77,7 +77,6 @@ h6 {
 
 .app-container {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -109,6 +108,16 @@ label {
   border-radius: 14px;
   box-shadow: 0px 0px 10px grey;
   max-width: 600px;
+  height: fit-content;
+}
+
+.section-container {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.general-info, .education {
+  margin-bottom: 0px;
 }
 
 .general-info {
@@ -147,6 +156,8 @@ textarea {
   margin: 48px;
   margin-left: 0px;
   font-family: Space Mono;
+  grid-column: 2/3;
+  max-height: 650px;
 }
 
 .cv-name {
@@ -166,6 +177,11 @@ textarea {
   font-size: 20px;
 }
 
+.section-header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .cv-degree, .cv-company {
   font-style: italic;
 }
@@ -183,7 +199,8 @@ textarea {
   margin-top: 18px;
 }
 button {
-  background-color: rgb(211, 55, 84);
+  /* background-color: rgb(211, 55, 84); */
+  background-image: linear-gradient(to bottom right, rgb(211, 55, 84), rgb(174, 100, 25));
   border-radius: 30px;
   border: none;
   color: white;
