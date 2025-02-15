@@ -8,4 +8,4 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-Simple React project for a CV application form. Practice organizing a React project, using components, .jsx, and state.
+Simple React project for a CV application form. Practice organizing a React project, using components, .jsx files, and familiarity with state.

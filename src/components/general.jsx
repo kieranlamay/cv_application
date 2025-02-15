@@ -16,7 +16,13 @@ export function GeneralInfo({ formData, handleChange, handleSubmit }) {
         )}
       </div>
       {isEditing ? (
-        <form onSubmit={handleSubmit} action="">
+        <form
+          onSubmit={(event) => {
+            handleSubmit(event);
+            handleEdit();
+          }}
+          action=""
+        >
           <label htmlFor="name">Full Name</label>
           <input
             type="text"

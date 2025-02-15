@@ -116,7 +116,8 @@ label {
   grid-row: 1/2;
 }
 
-.general-info, .education {
+.general-info,
+.education {
   margin-bottom: 0px;
 }
 
@@ -182,7 +183,8 @@ textarea {
   justify-content: space-between;
 }
 
-.cv-degree, .cv-company {
+.cv-degree,
+.cv-company {
   font-style: italic;
 }
 
@@ -200,7 +202,11 @@ textarea {
 }
 button {
   /* background-color: rgb(211, 55, 84); */
-  background-image: linear-gradient(to bottom right, rgb(211, 55, 84), rgb(174, 100, 25));
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(211, 55, 84),
+    rgb(174, 100, 25)
+  );
   border-radius: 30px;
   border: none;
   color: white;
